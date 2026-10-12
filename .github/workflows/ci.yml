@@ -1,0 +1,26 @@
+name: MyWeb DEV CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Enable Corepack for Yarn 4
+        run: corepack enable
+      - name: Install locked dependencies
+        run: yarn install --immutable
+      - name: Build MyWeb
+        run: yarn build
