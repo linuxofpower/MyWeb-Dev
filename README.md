@@ -1,3 +1,19 @@
+# MyWeb — Development
+
+**DEV repository:** [linuxofpower/MyWeb-Dev](https://github.com/linuxofpower/MyWeb-Dev), branch `main`.
+
+**PROD repository:** [yaMorozYaroslav/MyWeb](https://github.com/yaMorozYaroslav/MyWeb), branch `master`.
+
+The two repositories implement **the same product**. Develop, test and verify changes in DEV. Promote selected verified changes by opening a pull request against PROD from a branch in a real fork of PROD; the production owner alone reviews and accepts/rejects the PR. No direct production pushes, merges or deployments from this DEV repository. DEV and PROD keep independent Git histories; do not merge them wholesale.
+
+**Initial DEV baseline:** exact source snapshot of `yaMorozYaroslav/MyWeb@3c6ecd885d5431d16f5cda9c0bdec74966c0a0db`, tree `9b201d5dafaeadcd0f06530076f38c0a3c292e93`. The DEV Git history was preserved.
+
+**DEV verification:** the [MyWeb CI workflow](.github/workflows/ci.yml) runs `yarn install --immutable` and `yarn build` on pushes to `main` and pull requests.
+
+---
+
+## Original application README
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
