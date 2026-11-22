@@ -16,7 +16,7 @@ export const Profile = () => {
 	  <div  className={s.container}> 
 		   
 		   <h2 className={s.name}> Yaroslav Moroz,</h2>
-		   <h2 className={s.age}>26 years old</h2>
+		   <h2 className={s.age}>27 years old</h2>
 		   
 		   <img onClick={onZoom} src={imgUrl}
 		        className={!zoom?s.pic:s.picZoom}/>
